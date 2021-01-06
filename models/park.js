@@ -19,6 +19,15 @@ Park.prototype.removeFromCollection = function(dinosuar){
     } 
 }
 // find the dino that attracts most visitors 
+Park.prototype.mostPopular = function(){
+    let highest = 0;
+    for(let currentDino of this.dinosaurs){
+        if(this.dinosaurs.guestsAttractedPerDay > highest){
+            highest.push(this.dinosaurs[i]);
+        }
+    }
+    console.log(highest);
+}
 
 // find all dinos of particular species 
 
