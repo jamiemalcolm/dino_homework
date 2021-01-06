@@ -12,7 +12,12 @@ Park.prototype.addToCollection = function(dinosaur){
 }
 
 // remove a dinosaur from its collection 
-
+Park.prototype.removeFromCollection = function(dinosuar){
+    const index = this.dinosaurs.indexOf(dinosuar);
+    if (index > -1){
+        this.dinosaurs.splice(index, 1);
+    } 
+}
 // find the dino that attracts most visitors 
 
 // find all dinos of particular species 
