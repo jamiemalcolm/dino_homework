@@ -1,6 +1,10 @@
 // function to declare park 
 // name, ticket price, collection of dinos 
-
+const Park = function (name, ticketPrice, dinosaurs) {
+    this.name = name;
+    this.ticketPrice = ticketPrice;
+    this.dinosaurs = dinosaurs;
+}
 
 // function to add dinosaur to its collection of dinosaurs
 
