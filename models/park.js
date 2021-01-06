@@ -55,7 +55,16 @@ Park.prototype.totalNumOfGuestsPerDay = function(){
 }
 
 // calculate total number of visitors per year 
-
+Park.prototype.guestsPerYear = function(leapYear){
+    if(leapYear === true){
+        let guestDay = this.totalNumOfGuestsPerDay();
+        let guestsYear = guestDay * 366;    
+    }else{
+        guestDay = this.totalNumOfGuestsPerDay();
+        guestsYear = guestDay * 365;
+    }
+    return guestsYear;
+}
 // calculate the totla revenue from ticket sales for a year 
 
 module.exports = Park;
