@@ -61,9 +61,12 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, park.allDinosOfSpecies('Tyrannosaurus rex'))
   });
 
-  it('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day', function(){
+    const actual = 1000;
+    assert.strictEqual(actual, park.totalNumOfGuestsPerDay());
+  });
 
-  xit('should be able to calculate the total number of visitors per year');
+  it('should be able to calculate the total number of visitors per year');
 
   xit('should be able to calculate total revenue for one year');
 
