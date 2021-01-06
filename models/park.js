@@ -66,5 +66,8 @@ Park.prototype.guestsPerYear = function(leapYear){
     return guestsYear;
 }
 // calculate the totla revenue from ticket sales for a year 
-
+Park.prototype.yearlyEarnings = function(leapYear) {
+    let yearlyEarnings = this.guestsPerYear(leapYear) * this.ticketPrice;
+    return yearlyEarnings;
+}
 module.exports = Park;
