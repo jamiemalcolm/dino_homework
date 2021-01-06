@@ -19,14 +19,18 @@ Park.prototype.removeFromCollection = function(dinosuar){
     } 
 }
 // find the dino that attracts most visitors 
+// should be able to find the dinosaur that attracts the most visitors
 Park.prototype.mostPopular = function(){
-    let highest = 0;
-    for(let currentDino of this.dinosaurs){
-        if(this.dinosaurs.guestsAttractedPerDay > highest){
-            highest.push(this.dinosaurs[i]);
+    let mostPopularDino;
+    let numOfGuests = 0;
+    for(currentDino of this.dinosaurs){
+        if(currentDino.guestsAttractedPerDay > numOfGuests){
+            mostPopularDino = currentDino;
+            numOfGuests = currentDino.guestsAttractedPerDay;
         }
     }
-    console.log(highest);
+    return mostPopularDino;
+    
 }
 
 // find all dinos of particular species 
