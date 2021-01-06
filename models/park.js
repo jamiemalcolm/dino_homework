@@ -70,4 +70,18 @@ Park.prototype.yearlyEarnings = function(leapYear) {
     let yearlyEarnings = this.guestsPerYear(leapYear) * this.ticketPrice;
     return yearlyEarnings;
 }
+
+// Remove all dinosaurs of a particular species
+Park.prototype.removeDinosBySpecies = function(species){
+    dinosToRemove = this.allDinosOfSpecies(species);
+    for(currentDino of dinosToRemove){
+        this.removeFromCollection(currentDino);
+    }
+    return this.dinosaurs;
+}
+
+// Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type
+// Example: { 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }
+
+
 module.exports = Park;

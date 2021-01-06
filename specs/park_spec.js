@@ -76,4 +76,11 @@ describe('Park', function() {
     assert.strictEqual(actual, park.yearlyEarnings());
   });
 
+  it('should be able to remove all animals of a specific species', function(){
+    park.addToCollection(dinosaur6);
+    park.removeDinosBySpecies('Tyrannosaurus rex');
+    const actual = [dinosaur2, dinosaur3];
+    assert.deepStrictEqual(actual, park.dinosaurs);
+  });
+  
 });
