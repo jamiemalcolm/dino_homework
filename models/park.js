@@ -34,6 +34,15 @@ Park.prototype.mostPopular = function(){
 }
 
 // find all dinos of particular species 
+Park.prototype.allDinosOfSpecies = function(species){
+    let dinosOfSpecies= [];
+    for(currentDino of this.dinosaurs){
+        if(currentDino.species === species){
+            dinosOfSpecies.push(currentDino);
+        }
+    }
+    return dinosOfSpecies;
+}
 
 // calculate total number of visitors per day 
 

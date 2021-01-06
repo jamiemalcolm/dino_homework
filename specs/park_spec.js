@@ -16,6 +16,8 @@ describe('Park', function() {
     dinosaur3 = new Dinosaur('Caudipteryx', 'Omnivore', 150)
     dinosaur4 = new Dinosaur('Avimimus', 'Omnivore', 80)
     dinosaur5 = new Dinosaur('Brontosaurus', 'Herbivore', 200)
+    dinosaur6 = new Dinosaur('Tyrannosaurus rex', 'Carnivore', 600)
+
     dinosaurs2021 = [dinosaur1, dinosaur2, dinosaur3];
     park = new Park('Jurassic Park', 35, dinosaurs2021);
   });
@@ -53,9 +55,13 @@ describe('Park', function() {
     
   });
 
-  xit('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function(){
+    park.addToCollection(dinosaur6);
+    const actual = [dinosaur1, dinosaur6];
+    assert.deepStrictEqual(actual, park.allDinosOfSpecies('Tyrannosaurus rex'))
+  });
 
-  xit('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day');
 
   xit('should be able to calculate the total number of visitors per year');
 
