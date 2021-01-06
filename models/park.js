@@ -19,3 +19,5 @@ const Park = function (name, ticketPrice, dinosaurs) {
 // calculate total number of visitors per year 
 
 // calculate the totla revenue from ticket sales for a year 
+
+module.exports = Park;
