@@ -82,6 +82,22 @@ Park.prototype.removeDinosBySpecies = function(species){
 
 // Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type
 // Example: { 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }
-
+Park.prototype.dinosWithDiets = function(){
+    let dinosWithDiets = {
+        Carnivore: 0,
+        Herbivore: 0,
+        Omnivore: 0,
+    };
+    for(currentDino of this.dinosaurs){
+        if(currentDino.diet === 'Carnivore'){
+            dinosWithDiets.Carnivore +=1;
+        }else if(currentDino.diet === 'Herbivore'){
+            dinosWithDiets.Herbivore +=1;
+        }else{
+            dinosWithDiets.Omnivore +=1;
+        }
+    }
+    return dinosWithDiets;
+}
 
 module.exports = Park;
