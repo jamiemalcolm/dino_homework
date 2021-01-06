@@ -7,6 +7,9 @@ const Park = function (name, ticketPrice, dinosaurs) {
 }
 
 // function to add dinosaur to its collection of dinosaurs
+Park.prototype.addToCollection = function(dinosaur){
+    this.dinosaurs.push(dinosaur)
+}
 
 // remove a dinosaur from its collection 
 
