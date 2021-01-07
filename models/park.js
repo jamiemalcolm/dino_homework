@@ -23,7 +23,7 @@ Park.prototype.removeFromCollection = function(dinosuar){
 Park.prototype.mostPopular = function(){
     let mostPopularDino;
     let numOfGuests = 0;
-    for(currentDino of this.dinosaurs){
+    for(let currentDino of this.dinosaurs){
         if(currentDino.guestsAttractedPerDay > numOfGuests){
             mostPopularDino = currentDino;
             numOfGuests = currentDino.guestsAttractedPerDay;
@@ -36,7 +36,7 @@ Park.prototype.mostPopular = function(){
 // find all dinos of particular species 
 Park.prototype.allDinosOfSpecies = function(species){
     let dinosOfSpecies= [];
-    for(currentDino of this.dinosaurs){
+    for(let currentDino of this.dinosaurs){
         if(currentDino.species === species){
             dinosOfSpecies.push(currentDino);
         }
@@ -74,7 +74,7 @@ Park.prototype.yearlyEarnings = function(leapYear) {
 // Remove all dinosaurs of a particular species
 Park.prototype.removeDinosBySpecies = function(species){
     dinosToRemove = this.allDinosOfSpecies(species);
-    for(currentDino of dinosToRemove){
+    for(let currentDino of dinosToRemove){
         this.removeFromCollection(currentDino);
     }
     return this.dinosaurs;
@@ -88,7 +88,7 @@ Park.prototype.dinosWithDiets = function(){
         Herbivore: 0,
         Omnivore: 0,
     };
-    for(currentDino of this.dinosaurs){
+    for(let currentDino of this.dinosaurs){
         if(currentDino.diet === 'Carnivore'){
             dinosWithDiets.Carnivore +=1;
         }else if(currentDino.diet === 'Herbivore'){
